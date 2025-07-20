@@ -186,10 +186,12 @@ def menu(death_count):
         pygame.display.update()
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                break
+                pygame.quit()
+                exit()
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_SPACE:
                     jump_sound.play()
+                    running = False
                     main()
 
 menu(death_count=0)
