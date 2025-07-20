@@ -169,8 +169,10 @@ def menu(death_count):
     while running:
         SCREEN.fill((234,153,153))
         
+        # start menu 
         if death_count == 0:
             start_text = font.render("Press the Space Bar to Start", True, (255,255,255))
+        # end game menu
         elif death_count > 0:
             start_text = font.render("Press the Space Bar to Try Again", True, (255,255,255))
             score_text = font.render("Points: " + str(points), True, (255,255,255))
